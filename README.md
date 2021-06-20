@@ -26,3 +26,8 @@ Preview:
 cd themes/gallery/exampleSite
 hugo serve --themesDir ../..
 ```
+
+## Test theme as standalone repo
+```
+hugo serve --config exampleSite/config.toml --contentDir exampleSite/content
+```
