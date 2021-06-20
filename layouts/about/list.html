@@ -1,0 +1,31 @@
+{{define "main"}}
+	<div class="container" style="margin-top:20vh;">
+		<div class="row gy-4">
+		  <div class="col-md-6">
+			<img src="{{.Site.Params.aboutImage}}" alt="" style="width:100%;">
+		  </div>
+		  <div class="col-md-6" style="display:flex; flex-direction:column;">
+			<p>	{{.Content}}</p>
+			<div style="margin-top:auto;">
+                {{range $idx, $value := .Site.Params.social}}
+                    {{if eq $idx "linkedin"}}
+                    <a target="_blank" href="{{$value}}" class="fa fa-linkedin fa-lg"></a>
+                    {{end}}
+                    {{if eq $idx "facebook"}}
+                    <a target="_blank" href="{{$value}}" class="fa fa-facebook fa-lg"></a>
+                    {{end}}
+                    {{if eq $idx "youtube"}}
+                    <a target="_blank" href="{{$value}}" class="fa fa-youtube fa-lg"></a>
+                    {{end}}
+                    {{if eq $idx "instagram"}}
+                    <a target="_blank" href="{{$value}}" class="fa fa-instagram fa-lg"></a>
+                    {{end}}
+                    {{if eq $idx "website"}}
+                    <a target="_blank" href="{{$value}}" class="fa fa-globe fa-lg"></a>
+                    {{end}}
+                {{end}}
+			</div>
+		  </div>
+		</div>
+	</div>
+    {{end}}

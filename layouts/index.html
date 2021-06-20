@@ -1,0 +1,35 @@
+{{define "main"}}
+<div class="jumbotron m-3 cover p-3">
+    <h1 class="display-4">Joe Smith</h1>
+    <p class="lead">Professional Photographer</p>
+    <hr class="my-4">
+    <p>Check gallery</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href='{{ relref . "gallery" }}' role="button">Gallery</a>
+    </p>
+  </div>
+  <div class="container mb-2">
+      <div class="row gy-4">
+      </div>
+  </div>
+  <div class="container mb-2 mt-4">
+    <h2 class="text-primary">Latest Albums:</h2>
+    <div class="row gy-4">
+      {{range first 3 (where .Site.RegularPages "Section" "gallery")}}
+      <div class="col-md-4">
+        <a href="{{.Permalink}}" target="_blank">
+            <div class="card">
+              {{$img := .Resources.GetMatch "thumbnail/*"}}
+              {{ $img := $img.Fit "300x300" }}
+              <img src="{{$img.Permalink}}" style="height:200px;object-fit:cover;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{.Title}}</h5>
+                    <p class="card-text">{{.Content}}</p>
+                </div>
+            </div>
+        </a>
+      </div>
+      {{end}}
+    </div>
+  </div>
+{{end}}

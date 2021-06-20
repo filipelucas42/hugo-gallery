@@ -1,0 +1,23 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Hugo Gallery"
+uglyurls = true
+#theme="gallery"
+[markup.goldmark.renderer]
+unsafe= true
+
+[Params]
+
+navbarText = "My Gallery"
+contact = "filipe.jl.ines@gmail.com"
+coverImage =  "/image/cover.jpg"
+aboutImage = "/image/cover.jpg"
+
+[Params.social]
+    linkedin=""
+    instagram=""
+    facebook=""
+    youtube=""
+    website=""
+
+

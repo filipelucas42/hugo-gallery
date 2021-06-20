@@ -1,0 +1,23 @@
+body {
+    min-height: 100vh;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+}
+/* 
+.cover::after{
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color:grey;
+} */
+.cover {
+    height:50vh; 
+    position: relative;
+    background-size:cover; 
+    color: white;
+}

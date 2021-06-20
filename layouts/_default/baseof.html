@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .cover {
+            background-image: url('{{.Site.Params.coverImage}}');
+        }
+    </style>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        {{- block "main" . }}{{- end }}
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

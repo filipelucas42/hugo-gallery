@@ -1,0 +1,18 @@
+name = "Gallery"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "Photo gallery"
+homepage = "https://github.com/filipelucas42/hugo-gallery"
+tags = ["gallery", "portfolio", "photography"]
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Filipe Lucas"
+  homepage = "https://www.filipelucas.com"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""
